@@ -1,0 +1,45 @@
+{
+  "name": "@slothlabs/health-dsl",
+  "version": "0.1.0",
+  "description": "Tiny, zero-dependency DSL for service readiness/liveness checks — concurrent, per-check timeouts, correct aggregation, JSON-serializable.",
+  "type": "module",
+  "license": "MIT",
+  "author": "SlothLabs",
+  "homepage": "https://github.com/SlothLabs/health-dsl#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlothLabs/health-dsl.git"
+  },
+  "keywords": [
+    "health",
+    "healthcheck",
+    "readiness",
+    "liveness",
+    "actuator",
+    "typescript",
+    "dsl"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.test.json",
+    "test": "node --test test/*.test.ts",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
