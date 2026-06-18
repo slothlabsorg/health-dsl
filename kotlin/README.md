@@ -59,7 +59,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.slothlabsorg:health-dsl:0.1.0")
+    implementation("com.github.slothlabsorg:health-dsl:v0.1.0")
 }
 ```
 
