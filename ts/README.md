@@ -48,10 +48,12 @@ report.toJSON();
 ## Install
 
 ```sh
-npm install @slothlabs/health-dsl
+npm i @slothlabs/health-dsl
 ```
 
-Zero runtime dependencies. Requires Node 22.6+ (ESM).
+Published to npm on each `npm-v*` tag (see
+[RELEASING.md](../RELEASING.md)). Zero runtime dependencies. Requires Node 22.6+
+(ESM).
 
 ## Status semantics
 

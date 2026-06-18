@@ -48,6 +48,57 @@ report.status                  // UP | DEGRADED | DOWN
 | TypeScript | [`ts/`](ts/)         | `npm i @slothlabs/health-dsl`    | `Promise.all` (zero deps) |
 | Kotlin/JVM | [`kotlin/`](kotlin/) | `com.slothlabs:health-dsl`       | coroutines                |
 
+## Install
+
+Each implementation lives in its own subdirectory of this one repository and is
+published to its language's registry. You can install from a registry release,
+or pull straight from git/JitPack today.
+
+### Rust
+
+From git (works immediately, no registry release needed):
+
+```sh
+cargo add health-dsl --git https://github.com/slothlabsorg/health-dsl
+```
+
+Or, once a `rust-v*` tag is published to crates.io:
+
+```sh
+cargo add health-dsl
+cargo add tokio --features rt-multi-thread,macros,time
+```
+
+### Kotlin / JVM (JitPack — works immediately)
+
+JitPack builds the `kotlin/` module straight from a git tag — no manual publish
+step required.
+
+```kotlin
+// build.gradle.kts
+repositories {
+    mavenCentral()
+    maven("https://jitpack.io")
+}
+
+dependencies {
+    implementation("com.github.slothlabsorg:health-dsl:0.1.0")
+}
+```
+
+The `0.1.0` coordinate resolves to the git tag `v0.1.0`. (Releases pushed to
+GitHub Packages under `com.slothlabs:health-dsl` via a `jvm-v*` tag are an
+alternative; see [RELEASING.md](RELEASING.md).)
+
+### TypeScript
+
+```sh
+npm i @slothlabs/health-dsl
+```
+
+Available on npm once the `npm-v*` tag publishes the package (see
+[RELEASING.md](RELEASING.md)).
+
 ## Status semantics (identical across languages)
 
 | Any check…                         | Overall status |

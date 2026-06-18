@@ -49,8 +49,24 @@ report.toJson()
 
 ## Install
 
+Via JitPack (works immediately from a git tag — no manual publish step):
+
 ```kotlin
 // build.gradle.kts
+repositories {
+    mavenCentral()
+    maven("https://jitpack.io")
+}
+
+dependencies {
+    implementation("com.github.slothlabsorg:health-dsl:0.1.0")
+}
+```
+
+The library is also published to GitHub Packages under the
+`com.slothlabs:health-dsl` coordinate on each `jvm-v*` tag:
+
+```kotlin
 dependencies {
     implementation("com.slothlabs:health-dsl:0.1.0")
 }

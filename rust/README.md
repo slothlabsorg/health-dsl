@@ -58,6 +58,15 @@ report.to_json();
 
 ## Install
 
+Straight from git (works immediately, no crates.io release required):
+
+```sh
+cargo add health-dsl --git https://github.com/slothlabsorg/health-dsl
+cargo add tokio --features rt-multi-thread,macros,time
+```
+
+Or from crates.io once a `rust-v*` tag has been published:
+
 ```sh
 cargo add health-dsl
 cargo add tokio --features rt-multi-thread,macros,time

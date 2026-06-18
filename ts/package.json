@@ -5,10 +5,14 @@
   "type": "module",
   "license": "MIT",
   "author": "SlothLabs",
-  "homepage": "https://github.com/SlothLabs/health-dsl#readme",
+  "homepage": "https://github.com/slothlabsorg/health-dsl#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SlothLabs/health-dsl.git"
+    "url": "git+https://github.com/slothlabsorg/health-dsl.git",
+    "directory": "ts"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "health",
